@@ -32,6 +32,6 @@ switch (true) {
     break;
 
   default:
-    grade = 'Invalid score'
+    grade = 'A'
     break;
 }
