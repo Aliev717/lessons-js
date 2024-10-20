@@ -35,4 +35,13 @@ const gallery = {
   'The Scream': 'Edvard Munch',
 }
 
-function updateGallery() {}
+function updateGallery(anyObj, proper, val) {
+  for (const key in anyObj) {
+      if (key === proper) {
+          anyObj[proper] = val
+          return anyObj
+      } else {
+          anyObj[proper] = val
+      }
+  }
+}
