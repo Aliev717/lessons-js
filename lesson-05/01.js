@@ -18,20 +18,32 @@ const game = {
     gold: 250,
     lumber: 100,
   },
-  addResource(resource, amount) {
-    if (hasMyProp(game.resources, resource) === true) {
-    game.resources[resource] += amount
-    return game.resources[resource]
-} else {
-    console.log('Invalid resource')
-}}
+  addResource() {},
 }
 
 function hasMyProp(anyObj, prop) {
-  for(const key in anyObj){
+  for (const key in anyObj) {
       if (key === prop) {
-          return true
+          return true;
       }
-  return false
   }
+  return false
 }
+
+// console.log(hasMyProp(game.resources, 'gold'));
+
+
+
+function addResource(resource, amount) {
+  if (hasMyProp(game.resources, resource) === true) {
+      game.resources[resource] += amount
+      return game.resources[resource]
+  } else {
+      console.log('Invalid resource')
+}
+}
+
+// addResource('lumber', 130);
+// addResource('gold', 230);
+
+// console.log(game.resources);
