@@ -25,7 +25,6 @@ const WEB_TECH_IMAGES = [
 ]
 
 
-
 const changeableImg = document.getElementById('web-tech-image');
 let index = 0;
 const prev = document.getElementById('prev-button');
@@ -36,32 +35,11 @@ prev.addEventListener('click', function(){
 });
 next.addEventListener('click', function(){
   changeImg(index+1)
-});
+}); 
 
 function changeImg(param1) {
-  index = (param1+ WEB_TECH_IMAGES.length) % WEB_TECH_IMAGES.length;
+  index = (param1 + WEB_TECH_IMAGES.length) % WEB_TECH_IMAGES.length;
 
   changeableImg.src = WEB_TECH_IMAGES[index];
   
 }
-
-
-
-
-
-
-
-
-
-// function nextImage() {
-//   alert('next')
-// }
-
-// function prevImage() {
-//   alert('prev')
-// }
-
-// if (next.click === true) {
-//   imageSrc = WEB_TECH_IMAGES[i+1];
-// }
-

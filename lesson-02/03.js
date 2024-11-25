@@ -9,7 +9,7 @@ const score = 70; // тестовое значение, можно изменя�
 let grade;
 
 // your code
-
+/*
 switch (true) {
   case score <= 49:
     grade = 'F'
@@ -34,4 +34,4 @@ switch (true) {
   default:
     grade = 'A'
     break;
-}
+}*/
