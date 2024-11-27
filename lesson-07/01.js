@@ -9,17 +9,19 @@
   Другой вариант - использовать метод split строк, и метод массива join.
 */
 
-function capitalizeWords(str) {
-  if (typeof str !== 'string'){
-    return false
-  }
+// function capitalizeWords(str) {
+//   if (typeof str !== 'string'){
+//     return false
+//   }
+  
+//   const splitStr = str.split(' ');
 
-  let arrStr = str.split('o', '')
-
-  for (let i = 0; i < str.length; i++) {
+//   for (let i = 0; i < splitStr.length; i++) {
+//     // toUpperCase()
     
-  }
-  return arrStr
-}
+//   }
 
-console.log(capitalizeWords("hello world from javascript"))
+//   return splitStr
+// }
+
+// console.log(capitalizeWords("hello world from javascript"))

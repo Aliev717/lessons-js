@@ -11,6 +11,7 @@
 * truncate("Короткая строка", 20) // Ожидаемый результат: "Короткая строка"
 */
 
+/*
 function truncate(str, maxLength) {
   // your code
   if (typeof str !== 'string') {
@@ -24,3 +25,4 @@ function truncate(str, maxLength) {
 }
 
 console.log(truncate("Вот, что мне действительно нравится в этом", 20))
+*/
