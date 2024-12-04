@@ -8,7 +8,7 @@
   решения, как самый эффективный.
   Другой вариант - использовать метод split строк, и метод массива join.
 */
-
+/*
 function capitalizeWords(str) {
   if (typeof str !== 'string'){
     return false
@@ -27,3 +27,4 @@ function capitalizeWords(str) {
 }
 
 console.log(capitalizeWords("hello world from javascript"))
+*/
