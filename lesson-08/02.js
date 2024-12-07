@@ -72,4 +72,4 @@ cancelButton.addEventListener('click', () => {
   //   clearInterval(timerId);
   //   countdownDisplay.textContent = "Отменено";
   // }
-})
+}) 
