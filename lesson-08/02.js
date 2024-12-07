@@ -44,12 +44,11 @@ let timerId
 startButton.addEventListener('click', () => {
   let counter = 3;
   // your code
-  countdownDisplay.textContent = counter;
-
   if (!isTimerStarted) {
+    countdownDisplay.textContent = counter;
     timerId = setInterval(() => {
-      counter--
-      if (counter > 0) {
+      if (counter > 1) {
+        counter--
         countdownDisplay.textContent = counter;
       } else {
         countdownDisplay.textContent = '🚀'
@@ -62,10 +61,12 @@ startButton.addEventListener('click', () => {
 
 cancelButton.addEventListener('click', () => {
   // your code
-  if (!isTimerStarted) {
-    const stopRocket = setTimeout(() => {
-      clearInterval(timerId);
-      countdownDisplay.textContent = "Отменено";
-    }, 0)
-  }
+  
+  // if (!isTimerStarted) {
+    clearInterval(timerId);
+    countdownDisplay.textContent = "Отменено";
+  // } else {
+  //   clearInterval(timerId);
+  //   countdownDisplay.textContent = "Отменено";
+  // }
 })
