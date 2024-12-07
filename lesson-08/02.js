@@ -45,6 +45,7 @@ startButton.addEventListener('click', () => {
   let counter = 3;
   // your code 
   if (!isTimerStarted) {
+    isTimerStarted = true // Устанавливаем флаг, что таймер запущен
     countdownDisplay.textContent = counter;
     timerId = setInterval(() => {
       if (counter > 1) {
@@ -52,8 +53,9 @@ startButton.addEventListener('click', () => {
         countdownDisplay.textContent = counter;
       } else {
         clearInterval(timerId);
-        countdownDisplay.textContent = '🚀'
-        isTimerStarted = true
+        timerId = null; // Сбрасываем идентификатор таймера
+        isTimerStarted = false // Устанавливаем флаг, что таймер завершён
+        countdownDisplay.textContent = '🚀';
       }
     }, 1000)
   }
@@ -62,10 +64,10 @@ startButton.addEventListener('click', () => {
 cancelButton.addEventListener('click', () => {
   // your code
 
-  if (!isTimerStarted) {
-    countdownDisplay.textContent = "Отменено";
+  if (isTimerStarted) {
     clearInterval(timerId);
-  } else {
-    return false
+    timerId = null;
+    isTimerStarted = false; // Сбрасываем флаг, что таймер отменен
+    countdownDisplay.textContent = "Отменено";
   }
 })
