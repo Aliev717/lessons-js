@@ -38,25 +38,23 @@ const startButton = document.getElementById('start')
 const cancelButton = document.getElementById('cancel')
 const countdownDisplay = document.getElementById('countdown')
 
-let isTimerStarted = false
-let timerId
+let isTimerStarted = false;
+let timerId;
 
 startButton.addEventListener('click', () => {
   let counter = 3;
   // your code 
-  countdownDisplay.textContent = counter;
   if (!isTimerStarted) {
+    countdownDisplay.textContent = counter;
     timerId = setInterval(() => {
       if (counter > 1) {
         counter--
         countdownDisplay.textContent = counter;
       } else {
-        //counter = 0; //////////////////////
-        countdownDisplay.textContent = '🚀'
         clearInterval(timerId);
+        countdownDisplay.textContent = '🚀'
         isTimerStarted = true
       }
-      console.log(counter)
     }, 1000)
   }
 })
@@ -64,12 +62,10 @@ startButton.addEventListener('click', () => {
 cancelButton.addEventListener('click', () => {
   // your code
 
-  // if (!isTimerStarted) {
-    //counter = 0; //////////////////////
+  if (!isTimerStarted) {
     clearInterval(timerId);
     countdownDisplay.textContent = "Отменено";
-  // } else {
-  //   clearInterval(timerId);
-  //   countdownDisplay.textContent = "Отменено";
-  // }
-}) 
+  } else {
+    return false
+  }
+})
