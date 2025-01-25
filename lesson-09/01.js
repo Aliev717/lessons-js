@@ -30,9 +30,8 @@ const filter = (array, cb) => {
   const newArr = [];
 
   for (let i = 0; i < array.length; i++) {
-    cb(array[i], [i])
-    if (cb(array[i], [i]) == true) {
-      newArr.push(array[i])
+    if (cb(array[i], i)) {
+      newArr.push(array[i]);
     }
   }
 
