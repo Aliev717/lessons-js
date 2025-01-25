@@ -70,3 +70,46 @@ cancelButton.addEventListener('click', () => {
     isTimerStarted = !isTimerStarted;
   }
 })
+
+///////// сверху код написанный мной со второго раза, он короче на ~3 строки
+
+/////////снизу первый код, написал с помощью ИИ 
+/*
+const startButton = document.getElementById('start')
+const cancelButton = document.getElementById('cancel')
+const countdownDisplay = document.getElementById('countdown')
+
+let isTimerStarted = false;
+let timerId;
+
+startButton.addEventListener('click', () => {
+    let counter = 3;
+    // your code 
+    if (!isTimerStarted) {
+        isTimerStarted = true // Устанавливаем флаг, что таймер запущен
+        countdownDisplay.textContent = counter;
+        timerId = setInterval(() => {
+            if (counter > 1) {
+                counter--
+                countdownDisplay.textContent = counter;
+            } else {
+                clearInterval(timerId);
+                timerId = null; // Сбрасываем идентификатор таймера
+                isTimerStarted = false // Устанавливаем флаг, что таймер завершён
+                countdownDisplay.textContent = '🚀';
+            }
+        }, 1000)
+    }
+})
+
+cancelButton.addEventListener('click', () => {
+    // your code
+
+    if (isTimerStarted) {
+        clearInterval(timerId);
+        timerId = null;
+        isTimerStarted = false; // Сбрасываем флаг, что таймер отменен
+        countdownDisplay.textContent = "Отменено";
+    }
+})
+*/
