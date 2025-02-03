@@ -68,6 +68,7 @@ const view = {
       const deleteBtn = document.querySelector('.delete-button');
 
       deleteBtn.addEventListener('click', (event) => {
+          event.preventDefault();
           const movieId = +event.target.parentElement.id;
           controller.deleteMovie(movieId);
       })
